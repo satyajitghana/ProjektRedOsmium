@@ -14,13 +14,17 @@ import { MycatComponent } from './mycat/mycat.component';
 
 /* Firebase Stuff */
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database'; // RealTimeDB
+import { AngularFirestoreModule } from 'angularfire2/firestore'; // Firestore
 import { environment } from '../environments/environment';
 
 /* Angular Material Modules */
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatInputModule } from '@angular/material';
 import { AskMeAnythingComponent } from './ask-me-anything/ask-me-anything.component';
+
+/* Angular Forms */
+import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -49,8 +53,8 @@ const appRoutes: Routes = [
     HttpClientModule,
     JsonpModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
-    BrowserAnimationsModule, MatButtonModule, MatCheckboxModule
+    AngularFireDatabaseModule, AngularFirestoreModule.enablePersistence(),
+    BrowserAnimationsModule, MatButtonModule, MatCheckboxModule, MatInputModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

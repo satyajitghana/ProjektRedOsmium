@@ -1,3 +1,21 @@
-<p>
-  ask-me-anything works!
-</p>
+<h1>Questions</h1>
+<body>
+  <ul>
+    <li *ngFor="let item of itemsList | async">
+      <div id="questiontitle">Question : {{item.question}}</div>
+      <div id="time">Asked on : {{item.date | date:'yyyy-MM-dd HH:mm:ss:SSS'}}</div>
+      <!-- <div id="time">Asked on : {{item.date}}</div> -->
+      <div id="questionanswer">My Answer : {{item.answer}}</div>
+    </li>
+    <form (ngSubmit)="onSubmit()" #questionForm="ngForm">
+        <div class="form-group">
+          <label for="question">Your Question</label>
+          <input matInput type="textarea" class="form-control" id="question" required [(ngModel)]="question.question" name="question">
+        </div>
+        <button mat-button type="submit">Submit</button>
+      </form>
+  </ul>
+  <button mat-button (click)="prevPage()" [disabled]="!prevKeys?.length">Prev</button>
+  <button mat-button (click)="nextPage()" [disabled]="!nextKey">Next</button>
+  <!-- <button mat-button (click)="createQuestion()">TEST</button> -->
+</body>

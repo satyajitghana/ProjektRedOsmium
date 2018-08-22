@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    /* height: 100vh; */
+}
+
+h1 {
+    text-align: center;
+    margin: 10px;
+    color: #22a6b3;
+    text-shadow: 5px 5px rgba(126, 213, 223, 0.555)f;
+    font-size: 5em;
+}
+
+ul li {
+    display: block;
+    /* width: 100%; */
+    padding: 5px 20px;
+    margin: 10px 50px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.22);
+    border-radius: 10px;
+}
+
+form {
+    display: block;
+    /* width: 100%; */
+    padding: 5px 20px;
+    margin: 10px 50px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.22);
+    border-radius: 10px;
+}
+
+#question {
+    margin:10px;
+    margin-right: 10px;
+    display: block;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+label {
+    margin: 10px;
+}
+
+ul li * {
+    margin: 10px;
+}
