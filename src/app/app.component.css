@@ -110,6 +110,7 @@ nav ul li {
 }
 
 nav ul li a {
+    font-family: 'Lekton';
     margin: 0;
     padding: 0.6em;
     /* padding: 0; */

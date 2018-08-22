@@ -13,7 +13,7 @@ const httpOptions = {
 export class QuoteService {
 
   // url = 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1';
-  url = 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&_jsonp=JSONP_CALLBACK';
+  url = 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&_jsonp=JSONP_CALLBACK';
 
   constructor(private http: HttpClient, private jsonp: Jsonp) { }
 

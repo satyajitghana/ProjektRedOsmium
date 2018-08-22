@@ -18,7 +18,12 @@ export class HomeComponent implements OnInit {
 
   constructor(private quoteService: QuoteService) { }
 
-  ngOnInit() {
+  quoteMe() {
+    console.log('You Clicked Me');
+    this.getQuote();
+  }
+
+  getQuote() {
     this.quoteService.getQuote().subscribe(data => {
       this.thequote = {
         title: data.json()[0].title,
@@ -26,6 +31,10 @@ export class HomeComponent implements OnInit {
       };
       console.log(this.thequote);
     });
+  }
+
+  ngOnInit() {
+    this.getQuote();
   }
 
 }

@@ -8,6 +8,18 @@ h1 {
     padding: 40px;
 }
 
+h1 p:nth-child(1) {
+    display: inline;
+    color: rgba(252, 136, 48, 0.884);
+    text-shadow: 5px 5px rgba(252, 136, 48, 0.2);
+}
+
+h1 p:nth-child(2) {
+    display: inline;
+    color: #00b893c4;
+    text-shadow: 5px 5px #00b89354;
+}
+
 body {
     display: grid;
     grid-template-columns: 70% 40%;
@@ -17,6 +29,7 @@ body {
 }
 
 main {
+    width: 100%;
     display: block;
     grid-area: main;
     justify-self: center;
@@ -53,17 +66,25 @@ img {
 .quote {
     margin: 70px;
     padding: 20px;
-    display: grid;
+    /* display: inline-block; */
+    display: block;
     color: white;
     background-color: rgba(255, 255, 255, 0.22);
     font-size: 2em;
     border-radius: 10px;
+    font-family: 'Arvo';
     /* height: 50vh; */
 }
 
 #quotetitle {
     justify-self: right;
     justify-items: right;
+    /* since it's a inline-block now */
+    text-align: right;
+}
+
+#quotecontent {
+    text-align: justify;
 }
 
 .music {
@@ -113,3 +134,14 @@ img {
     border-radius: 80px;
     background-color: #f1c40f;
 }
+
+button {
+    margin-top: 15px;
+}
+
+.quoteme {
+    background-color: rgba(16, 172, 133, 0.507);
+    display: inline-block;
+    border-radius: 5px;
+}
+
