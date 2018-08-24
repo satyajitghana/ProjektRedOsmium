@@ -1,16 +1,13 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
-}
-body, html {
-    /* height: 100vh; */
-}
+} */
 
 h1 {
     text-align: center;
     margin: 10px;
     color: #22a6b3;
-    text-shadow: 5px 5px rgba(126, 213, 223, 0.555)f;
+    text-shadow: 5px 5px rgba(126, 213, 223, 0.349);
     font-size: 5em;
 }
 
@@ -34,6 +31,11 @@ form {
     border-radius: 10px;
 }
 
+.form-control {
+    border-radius: 20px;
+    padding: 0px, 10px, 0px, 10px;
+}
+
 #question {
     margin:10px;
     margin-right: 10px;
@@ -43,10 +45,80 @@ form {
     width: 100%;
 }
 
-label {
-    margin: 10px;
+#questiontitle {
+    font-size: 2em;
+    color: red;
 }
+
+#time {
+    text-align: right;
+}
+
+#submit {
+    background-color: #596275;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1.2em;
+}
+
+label {
+    margin: 20px;
+    padding: 10px;
+    font-size: 1.5em;
+    color: #6ab04c;
+}
+
+.your-question {
+    margin: 10px;
+    /* padding: 10px; */
+    font-size: 1.5em;
+    color: white;
+}
+
+/* label [for=question] {
+    text-size: 1.5em;
+    color: #6ab04c;
+} */
 
 ul li * {
     margin: 10px;
+}
+
+.prev, .next {
+    display: inline-block;
+    justify-self: center;
+    text-align: center;
+}
+
+.nav-buttons {
+    display: inline;
+    margin: 0 auto;
+}
+
+ul li .prev, ul li .next {
+    /* width: 100%; */
+    margin: 50px;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-buttons-div {
+    margin: 0 auto;
+    width: 656px;
+    text-align: center;
+}
+
+.prev, .next {
+    padding: 20px 50px;;
+    font-size: 1.5em;
+    color: white;
+}
+
+.prev {
+    background: #ff7979;
+}
+
+.next {
+    background: #bbdc58;
 }

@@ -14,7 +14,9 @@ export class AskMeAnythingComponent implements OnInit {
   public items: AngularFireList<any[]>;
   public itemsList: Observable<any[]>;
 
-  offset = 5;
+  titlecolor = ['#ffbe76', '#f6e58d', '#ff7979', '#badc58', '#dff9fb', '#f8a5c2', '#e77f67', '#ea8685', '#cf6a87'];
+
+  offset = 4;
   currKey: any;
   nextKey: any;
   prevKeys: any[] = [];
@@ -70,6 +72,14 @@ export class AskMeAnythingComponent implements OnInit {
     });
     this.itemsList = this.items.valueChanges();
     // console.log(this.itemsList);
+  }
+
+  testFunction() {
+    console.log('You clicked me !');
+  }
+
+  questiontitle() {
+    return this.titlecolor[Math.floor(Math.random() * (this.titlecolor.length - 1)) + 1];
   }
 
 }

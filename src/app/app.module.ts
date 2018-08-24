@@ -26,13 +26,16 @@ import { AskMeAnythingComponent } from './ask-me-anything/ask-me-anything.compon
 /* Angular Forms */
 import { FormsModule } from '@angular/forms';
 
+/* Chat Module */
+import { ChatModule } from './chat/chat.module';
+
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'aboutme', component: AboutmeComponent },
   { path: 'mycat', component: MycatComponent },
-  { path: 'ask-me-anything', component: AskMeAnythingComponent }
+  { path: 'ask-me-anything', component: AskMeAnythingComponent },
 ];
 
 @NgModule({
@@ -54,7 +57,8 @@ const appRoutes: Routes = [
     JsonpModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule, AngularFirestoreModule.enablePersistence(),
-    BrowserAnimationsModule, MatButtonModule, MatCheckboxModule, MatInputModule, FormsModule
+    BrowserAnimationsModule, MatButtonModule, MatCheckboxModule, MatInputModule, FormsModule,
+    ChatModule
   ],
   providers: [],
   bootstrap: [AppComponent]

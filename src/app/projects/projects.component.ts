@@ -12,4 +12,8 @@ export class ProjectsComponent implements OnInit {
   ngOnInit() {
   }
 
+  test() {
+    console.log('You clicked me !');
+  }
+
 }

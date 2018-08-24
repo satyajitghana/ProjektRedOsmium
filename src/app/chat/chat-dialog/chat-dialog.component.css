@@ -1,0 +1,64 @@
+body {
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin: 10px;
+    color: #f0932b;
+    text-shadow: 5px 5px #f0942b6b;
+    font-size: 5em;
+    margin-bottom: 30px;
+}
+.message {
+    border-radius: 50px;
+    /* margin: 0 15px 10px; */
+    /* margin: 0 50% 10px; */
+    margin: 10px 25%;
+    padding: 15px 20px;
+    position: relative;
+    font-weight: bold;
+}
+.message.to {
+    background-color: rgba(32, 150, 254, 0.596);
+    color: #fff;
+    /* margin-left: 100px; */
+    margin-left: 35%;
+    text-align: right;
+}
+.message.from {
+    background-color: #E5E4E9;
+    color: #363636;
+    /* margin-right: 100px; */
+    margin-right: 35%;
+
+}
+.message.to + .message.to,
+.message.from + .message.from {
+margin-top: -10px;
+}
+
+#textarea {
+    width: 40%;
+    border-radius: 20px;
+    color: black;
+}
+
+.messagearea {
+    /* display: inline; */
+    background: #f0942b8e;
+    margin: 0 auto;
+    width: 656px;
+    text-align: center;
+}
+
+.messagearea * {
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.2em;
+    color: white;
+}
+
+.mat-button {
+    color: white;
+}

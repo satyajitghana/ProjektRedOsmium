@@ -4,6 +4,9 @@
 
 export const environment = {
   production: false,
+  dialogflow: {
+    angularBot: 'ae0bea9b8c424c3584aa5ac247b83d6f'
+  },
   firebase: {
     apiKey: 'AIzaSyDMLPlhTgYWZEmMjLiADhKYaY5IFnORY0I',
     authDomain: 'rums-15e5f.firebaseapp.com',

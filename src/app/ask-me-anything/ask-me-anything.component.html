@@ -2,20 +2,31 @@
 <body>
   <ul>
     <li *ngFor="let item of itemsList | async">
-      <div id="questiontitle">Question : {{item.question}}</div>
+      <div id="questiontitle" [style.color]="questiontitle()">Question : {{item.question}}</div>
       <div id="time">Asked on : {{item.date | date:'yyyy-MM-dd HH:mm:ss:SSS'}}</div>
       <!-- <div id="time">Asked on : {{item.date}}</div> -->
       <div id="questionanswer">My Answer : {{item.answer}}</div>
     </li>
     <form (ngSubmit)="onSubmit()" #questionForm="ngForm">
         <div class="form-group">
-          <label for="question">Your Question</label>
+          <!-- <label for="question">Your Question</label> -->
+          <div class="your-question">Your Question</div>
           <input matInput type="textarea" class="form-control" id="question" required [(ngModel)]="question.question" name="question">
         </div>
-        <button mat-button type="submit">Submit</button>
+        <button mat-button type="submit" id="submit">Submit</button>
       </form>
+
+      
   </ul>
-  <button mat-button (click)="prevPage()" [disabled]="!prevKeys?.length">Prev</button>
-  <button mat-button (click)="nextPage()" [disabled]="!nextKey">Next</button>
-  <!-- <button mat-button (click)="createQuestion()">TEST</button> -->
+  <div class="nav-buttons-div">
+  <!-- <ul class="nav-buttons">
+  <li> -->
+      <button mat-button class="prev" (click)="prevPage()" [disabled]="!prevKeys?.length">Prev</button>
+  <!-- </li>
+  <li> -->
+      <button mat-button class="next" (click)="nextPage()" [disabled]="!nextKey">Next</button>
+    <!-- </li>
+  </ul> -->
+</div>
+  
 </body>

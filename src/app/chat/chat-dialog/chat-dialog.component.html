@@ -1,0 +1,17 @@
+<body>
+<h1>My CatBot</h1>
+
+<ng-container *ngFor="let message of messages | async">
+  <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot', 'to':   message.sentBy === 'user' }">
+    {{ message.content }}
+  </div>
+</ng-container>
+<div class="messagearea">
+<label for="nameField">Your Message</label>
+
+<input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" id="textarea" type="text">
+<button mat-button (click)="sendMessage()">Send</button>
+</div>
+</body>
+
+

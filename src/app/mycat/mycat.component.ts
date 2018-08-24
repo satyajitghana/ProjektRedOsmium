@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ChatService, Message } from '../chat.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-mycat',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MycatComponent implements OnInit {
 
-  constructor() { }
+  constructor(public chat: ChatService) { }
+
 
   ngOnInit() {
   }

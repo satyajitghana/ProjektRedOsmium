@@ -6,6 +6,18 @@
   },
   "exclude": [
     "src/test.ts",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    // This is commented out in the source, so why include it ?
+    "../node_modules/api-ai-javascript/ts/Request/TTSRequest.ts"
+  ],
+  "include": [
+    "**/*.spec.ts",
+    "**/*.d.ts",
+    "../node_modules/api-ai-javascript/*.ts",
+    "../node_modules/api-ai-javascript/**/*.ts"
+  ],
+  "files": [
+    "main.ts",
+    "polyfills.ts"
   ]
 }
