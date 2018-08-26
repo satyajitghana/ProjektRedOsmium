@@ -14,7 +14,13 @@
             <h3>What am i listening to ?</h3>
             <div class="musicPlaying">
                 <img src="./assets/music.svg" alt="Music_Icon">
-                <div id="musicText">Heartless - ONE (Original Never Ends)</div>
+                <div id="musicSegment">
+                    <div id="playingtitle">{{(playing | async)?.title}}</div>
+                    <div id="playingalbum">{{(playing | async)?.atitle}}</div>
+                    <div id="playingtimestamp">{{((playing | async)?.timestamp)*1000 | date:'yyyy-MM-dd HH:mm:ss'}}</div>
+                    <div id="status" style.color="{{status == 'Online' ? 'green' : 'red'}}">{{status}}</div>
+                    <!-- <div id="status" style.color="{{status == 'Online' ? 'green' : 'red'}}">{{((playing | async)?.timestamp)> 2 ? 'true' :'false')}}</div> -->
+                </div>
             </div>
         </section>
     </main>
